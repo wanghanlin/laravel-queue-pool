@@ -21,7 +21,7 @@ class QueuePoolServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                'command.queue.pool'
+                'command.queue.pool',
             ]);
         }
     }
