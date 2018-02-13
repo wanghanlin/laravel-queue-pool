@@ -17,9 +17,9 @@ composer require wanghanlin/laravel-queue-pool
 
 ## Usage
 
-``` php
-$skeleton = new Spatie\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+```bash
+php artisan queue:pool --workers=3
+php artisan queue:pool connect --workers=3 --queue=default --delay=0 --force --memory=128 --sleep=3 --timeout=60 --tries=0
 ```
 
 ### Testing
