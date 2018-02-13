@@ -18,6 +18,12 @@ class QueuePoolServiceProvider extends ServiceProvider
         $this->app->singleton('command.queue.pool', function ($app) {
             return new QueuePoolCommand($app['queue.pool']);
         });
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                'command.queue.pool'
+            ]);
+        }
     }
 
     /**
