@@ -1,9 +1,9 @@
 # Laravel Queue Pool
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/wanghanlin/laravel-queue-worker.svg?style=flat-square)](https://packagist.org/packages/wanghanlin/laravel-queue-worker)
-[![Build Status](https://img.shields.io/travis/wanghanlin/laravel-queue-worker/master.svg?style=flat-square)](https://travis-ci.org/wanghanlin/laravel-queue-worker)
-[![Quality Score](https://img.shields.io/scrutinizer/g/wanghanlin/laravel-queue-worker.svg?style=flat-square)](https://scrutinizer-ci.com/g/wanghanlin/laravel-queue-worker)
-[![Total Downloads](https://img.shields.io/packagist/dt/wanghanlin/laravel-queue-worker.svg?style=flat-square)](https://packagist.org/packages/wanghanlin/laravel-queue-worker)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/wanghanlin/laravel-queue-pool.svg?style=flat-square)](https://packagist.org/packages/wanghanlin/laravel-queue-pool)
+[![Build Status](https://img.shields.io/travis/wanghanlin/laravel-queue-pool/master.svg?style=flat-square)](https://travis-ci.org/wanghanlin/laravel-queue-pool)
+[![Quality Score](https://img.shields.io/scrutinizer/g/wanghanlin/laravel-queue-pool.svg?style=flat-square)](https://scrutinizer-ci.com/g/wanghanlin/laravel-queue-pool)
+[![Total Downloads](https://img.shields.io/packagist/dt/wanghanlin/laravel-queue-pool.svg?style=flat-square)](https://packagist.org/packages/wanghanlin/laravel-queue-pool)
 
 This package provide an artisan command `queue:pool` to start multiple queue worker and supervise them.
 
@@ -12,7 +12,7 @@ This package provide an artisan command `queue:pool` to start multiple queue wor
 You can install the package via composer:
 
 ```bash
-composer require wanghanlin/laravel-queue-worker
+composer require wanghanlin/laravel-queue-pool
 ```
 
 ## Usage
