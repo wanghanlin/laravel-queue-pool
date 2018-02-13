@@ -12,11 +12,11 @@ class QueuePoolServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->singleton('queue.pool', function () {
-             return new QueuePool($this->app->basePath());
+            return new QueuePool($this->app->basePath());
         });
 
         $this->app->singleton('command.queue.pool', function ($app) {
-             return new QueuePoolCommand($app['queue.pool']);
+            return new QueuePoolCommand($app['queue.pool']);
         });
     }
 
@@ -36,7 +36,7 @@ class QueuePoolServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            'queue.pool', 'command.queue.pool'
+            'queue.pool', 'command.queue.pool',
         ];
     }
 }

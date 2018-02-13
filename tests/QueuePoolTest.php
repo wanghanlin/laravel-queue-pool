@@ -3,10 +3,10 @@
 namespace Wanghanlin\QueuePool\Tests;
 
 use Mockery as m;
-use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
 use Wanghanlin\QueuePool\QueuePool;
 use Wanghanlin\QueuePool\QueuePoolOption;
+use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 
 class QueuePoolTest extends TestCase
 {
