@@ -19,7 +19,7 @@ composer require wanghanlin/laravel-queue-pool
 
 ```bash
 php artisan queue:pool --workers=3
-php artisan queue:pool connect --workers=3 --queue=default --delay=0 --force --memory=128 --sleep=3 --timeout=60 --tries=0
+php artisan queue:pool connection --workers=3 --queue=default --delay=0 --force --memory=128 --sleep=3 --timeout=60 --tries=0
 ```
 
 ### Testing
