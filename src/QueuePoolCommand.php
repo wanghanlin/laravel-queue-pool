@@ -75,6 +75,7 @@ class QueuePoolCommand extends Command
     protected function getQueue($connection)
     {
         $connection = $connection ?: $this->laravel['config']['queue.default'];
+
         return $this->input->getOption('queue') ?: $this->laravel['config']->get(
             "queue.connections.{$connection}.queue", 'default'
         );

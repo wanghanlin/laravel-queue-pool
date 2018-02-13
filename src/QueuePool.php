@@ -3,8 +3,8 @@
 namespace Wanghanlin\QueuePool;
 
 use Illuminate\Support\ProcessUtils;
-use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
+use Symfony\Component\Process\PhpExecutableFinder;
 
 class QueuePool
 {
@@ -77,6 +77,7 @@ class QueuePool
     protected function buildCommandTemplate()
     {
         $command = 'queue:work %s --queue=%s --delay=%s --memory=%s --sleep=%s --tries=%s';
+
         return "{$this->phpBinary()} {$this->artisanBinary()} {$command}";
     }
 
@@ -135,7 +136,7 @@ class QueuePool
     {
         $processes = [];
 
-        foreach(range(1, $options->workers) as $key) {
+        foreach (range(1, $options->workers) as $key) {
             $processes[$key] = $this->makeProcess($connection, $queue, $options);
         }
 
@@ -215,8 +216,8 @@ class QueuePool
     {
         $processes = $this->getProcesses();
 
-        array_walk( $processes, function ($process, $key) {
-            if (!$process->isRunning()) {
+        array_walk($processes, function ($process, $key) {
+            if (! $process->isRunning()) {
                 $process->start(function ($type, $line) use ($key) {
                     $line = "[Worker $key]: $line";
                     $this->handleWorkerOutput($type, $line);
